@@ -31,6 +31,9 @@ public class ListenerImplementation implements ITestListener, ISuiteListener {
 	 * This method is used for report configuration
 	 */
 	public void onStart(ISuite suite) {
+		System.out.println("Report configuration");
+		//UtilityClassObject.getTest().log(Status.INFO, "Report configuration");
+		//test.log(Status.INFO, "Report configuration");
 		/* Spark Report configuration */
 		String time = new Date().toString().replace(" ", "_").replace(":", "_");
 		spark = new ExtentSparkReporter("./AdvanceReport/report_"+time+".html");
@@ -50,15 +53,18 @@ public class ListenerImplementation implements ITestListener, ISuiteListener {
 	 */
 	public void onFinish(ISuite suite) {
 		report.flush();
+		System.out.println("Report Backup");
+		//test.log(Status.INFO, "Report Backup");
 	}
 
 	/**
 	 * This method is used to create the test
 	 */
 	public void onTestStart(ITestResult result) {
-		UtilityClassObject.setTest(test);
-		test.log(Status.INFO,result.getMethod().getMethodName() + "===START===");
+		
+		System.out.println(result.getMethod().getMethodName() + "===START===");
 		test= report.createTest(result.getMethod().getMethodName());
+		UtilityClassObject.setTest(test);
 	}
 
 	/**
@@ -81,7 +87,8 @@ public class ListenerImplementation implements ITestListener, ISuiteListener {
 		 TakesScreenshot screenshot = (TakesScreenshot) BaseClass.sdriver; 
 		 String filepath = screenshot.getScreenshotAs(OutputType.BASE64);
 		String time = new Date().toString().replace(" ", "_").replace(":", "_");
-		test.addScreenCaptureFromBase64String(filepath, testname+"_"+time);
-		test.log(Status.FAIL,result.getMethod().getMethodName()+"===FAILED===");
+		UtilityClassObject.getTest().addScreenCaptureFromBase64String(filepath, testname+"_"+time);
+		//test.addScreenCaptureFromBase64String(filepath, testname+"_"+time);
+		UtilityClassObject.getTest().log(Status.FAIL,result.getMethod().getMethodName()+"===FAILED===");
 	}
 }

@@ -1,197 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="3" ignored="3" total="7" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[====Connect To DB, Report Configuration====]]>
+    </line>
+    <line>
+      <![CDATA[====Open Browser====]]>
+    </line>
+    <line>
+      <![CDATA[====Login To Application====]]>
+    </line>
+    <line>
+      <![CDATA[====Logout of Application====]]>
+    </line>
+    <line>
+      <![CDATA[====Login To Application====]]>
+    </line>
+    <line>
+      <![CDATA[====Logout of Application====]]>
+    </line>
+    <line>
+      <![CDATA[====Login To Application====]]>
+    </line>
+    <line>
+      <![CDATA[====Logout of Application====]]>
+    </line>
+    <line>
+      <![CDATA[====Close Browser====]]>
+    </line>
+    <line>
+      <![CDATA[====Close DB Connection, Report Backup====]]>
+    </line>
   </reporter-output>
-  <suite started-at="2025-09-25T15:54:29 IST" name="Default suite" finished-at="2025-09-25T15:54:29 IST" duration-ms="364">
+  <suite started-at="2025-09-26T11:18:14 IST" name="Suite" finished-at="2025-09-26T11:21:20 IST" duration-ms="185493">
     <groups>
+      <group name="SmokeTest">
+        <method signature="CreateContactTest.createContact()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@31190526]" name="createContact" class="com.comcast.crm.contacttest.CreateContactTest"/>
+      </group> <!-- SmokeTest -->
+      <group name="RegressionTest">
+        <method signature="CreateContactTest.createContactWithDate()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@31190526]" name="createContactWithDate" class="com.comcast.crm.contacttest.CreateContactTest"/>
+        <method signature="CreateContactTest.createContactWithOrganization()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@31190526]" name="createContactWithOrganization" class="com.comcast.crm.contacttest.CreateContactTest"/>
+      </group> <!-- RegressionTest -->
     </groups>
-    <test started-at="2025-09-25T15:54:29 IST" name="Default test" finished-at="2025-09-25T15:54:29 IST" duration-ms="364">
-      <class name="practiceTest.InvoiceTest">
-        <test-method retried="true" signature="activeSim()[pri:0, instance:practiceTest.InvoiceTest@34a3d150]" started-at="2025-09-25T15:54:29 IST" name="activeSim" finished-at="2025-09-25T15:54:29 IST" duration-ms="48" status="SKIP">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Login] but found [ ]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Login] but found [ ]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at practiceTest.InvoiceTest.activeSim(InvoiceTest.java:11)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+    <test started-at="2025-09-26T11:18:14 IST" name="Test" finished-at="2025-09-26T11:21:20 IST" duration-ms="185493">
+      <class name="com.comcast.crm.contacttest.CreateContactTest">
+        <test-method is-config="true" signature="connectToDB()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@31190526]" started-at="2025-09-26T11:18:14 IST" name="connectToDB" finished-at="2025-09-26T11:18:14 IST" duration-ms="830" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Connect To DB, Report Configuration====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- connectToDB -->
+        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@31190526]" started-at="2025-09-26T11:18:15 IST" name="openBrowser" finished-at="2025-09-26T11:18:33 IST" duration-ms="18857" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[====Open Browser====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@31190526]" started-at="2025-09-26T11:18:33 IST" name="loginToApplication" finished-at="2025-09-26T11:18:45 IST" duration-ms="11633" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Login To Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="createContact()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@31190526]" started-at="2025-09-26T11:18:45 IST" name="createContact" finished-at="2025-09-26T11:19:21 IST" duration-ms="35617" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- activeSim -->
-        <test-method retried="true" signature="activeSim()[pri:0, instance:practiceTest.InvoiceTest@34a3d150]" started-at="2025-09-25T15:54:29 IST" name="activeSim" finished-at="2025-09-25T15:54:29 IST" duration-ms="13" status="SKIP">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Login] but found [ ]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Login] but found [ ]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at practiceTest.InvoiceTest.activeSim(InvoiceTest.java:11)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- createContact -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@31190526]" started-at="2025-09-26T11:19:21 IST" name="logout" finished-at="2025-09-26T11:19:33 IST" duration-ms="12331" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Logout of Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@31190526]" started-at="2025-09-26T11:19:33 IST" name="loginToApplication" finished-at="2025-09-26T11:19:35 IST" duration-ms="1707" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Login To Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="createContactWithDate()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@31190526]" started-at="2025-09-26T11:19:35 IST" name="createContactWithDate" finished-at="2025-09-26T11:20:06 IST" duration-ms="30706" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- activeSim -->
-        <test-method retried="true" signature="activeSim()[pri:0, instance:practiceTest.InvoiceTest@34a3d150]" started-at="2025-09-25T15:54:29 IST" name="activeSim" finished-at="2025-09-25T15:54:29 IST" duration-ms="16" status="SKIP">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Login] but found [ ]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Login] but found [ ]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at practiceTest.InvoiceTest.activeSim(InvoiceTest.java:11)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- createContactWithDate -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@31190526]" started-at="2025-09-26T11:20:06 IST" name="logout" finished-at="2025-09-26T11:20:09 IST" duration-ms="3118" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Logout of Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@31190526]" started-at="2025-09-26T11:20:09 IST" name="loginToApplication" finished-at="2025-09-26T11:20:16 IST" duration-ms="6979" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Login To Application====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="createContactWithOrganization()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@31190526]" started-at="2025-09-26T11:20:16 IST" name="createContactWithOrganization" finished-at="2025-09-26T11:21:16 IST" duration-ms="59885" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- activeSim -->
-        <test-method signature="activeSim()[pri:0, instance:practiceTest.InvoiceTest@34a3d150]" started-at="2025-09-25T15:54:29 IST" name="activeSim" finished-at="2025-09-25T15:54:29 IST" duration-ms="13" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Login] but found [ ]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Login] but found [ ]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at practiceTest.InvoiceTest.activeSim(InvoiceTest.java:11)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- createContactWithOrganization -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@31190526]" started-at="2025-09-26T11:21:16 IST" name="logout" finished-at="2025-09-26T11:21:19 IST" duration-ms="2746" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[====Logout of Application====]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- activeSim -->
-      </class> <!-- practiceTest.InvoiceTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@31190526]" started-at="2025-09-26T11:21:19 IST" name="closeBrowser" finished-at="2025-09-26T11:21:20 IST" duration-ms="1019" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Close Browser====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="closeDBConnection()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@31190526]" started-at="2025-09-26T11:21:20 IST" name="closeDBConnection" finished-at="2025-09-26T11:21:20 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[====Close DB Connection, Report Backup====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closeDBConnection -->
+      </class> <!-- com.comcast.crm.contacttest.CreateContactTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
