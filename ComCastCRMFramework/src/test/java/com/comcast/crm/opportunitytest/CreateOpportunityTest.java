@@ -14,9 +14,17 @@ import com.comcast.crm.objectrepositoryutility.CreatingNewOpportunity;
 import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.OpportunitiesInfoPage;
 import com.comcast.crm.objectrepositoryutility.OpportunityPage;
-
+/**
+ * This class is for create Opportunity
+ * @author Ponselvi
+ */
 public class CreateOpportunityTest extends BaseClass_Parallel{
 	@Test
+	/**
+	 * This method is for create opportunity
+	 * @throws Throwable
+	 * @throws IOException
+	 */
 	public void createOpportunity() throws Throwable, IOException {
 		String OPPORTUNITY = eu.getDataFromExcel("Opportunity", 1, 2) + ju.getRandomNumber();
 		String CONTACTS = eu.getDataFromExcel("Opportunity", 1, 3) + ju.getRandomNumber();

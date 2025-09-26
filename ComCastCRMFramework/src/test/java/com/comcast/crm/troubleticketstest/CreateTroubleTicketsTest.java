@@ -11,9 +11,17 @@ import com.comcast.crm.objectrepositoryutility.CreatingNewTroubleTicket;
 import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.TroubleTicketPage;
 import com.comcast.crm.objectrepositoryutility.TroubleTicketsInfoPage;
-
+/**
+ * This class is for create Trouble Ticket
+ * @author Ponselvi
+ */
 public class CreateTroubleTicketsTest extends BaseClass_Parallel{
 	@Test
+	/**
+	 * This method is for create Trouble Ticket
+	 * @throws EncryptedDocumentException
+	 * @throws IOException
+	 */
 	public void createTroubleTickets() throws EncryptedDocumentException, IOException {
 		String LASTNAME = eu.getDataFromExcel("TroubleTickets", 1, 2) + ju.getRandomNumber();
 		// Create Trouble Tickets

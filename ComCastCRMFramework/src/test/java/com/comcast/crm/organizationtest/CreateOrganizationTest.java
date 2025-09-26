@@ -12,9 +12,17 @@ import com.comcast.crm.objectrepositoryutility.CreatingNewOrganizationPage;
 import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.OrganizationInfoPage;
 import com.comcast.crm.objectrepositoryutility.OrganizationPage;
-
+/**
+ * This class is for create Organization
+ * @author Ponselvi
+ */
 public class CreateOrganizationTest extends BaseClass{
 	@Test(groups = "SmokeTest")
+	/**
+	 * This method is for create Organization
+	 * @throws EncryptedDocumentException
+	 * @throws IOException
+	 */
 	public void createOrganization() throws EncryptedDocumentException, IOException {
 		// Read Data from Excel
 		String ORGNAME = eu.getDataFromExcel("Organization", 1, 2) + ju.getRandomNumber();
@@ -35,6 +43,11 @@ public class CreateOrganizationTest extends BaseClass{
 	}
 
 	@Test(groups = "RegressionTest")
+	/**
+	 * This method is for create organization with Industry
+	 * @throws EncryptedDocumentException
+	 * @throws IOException
+	 */
 	public void createOrganizationWithIndustry() throws EncryptedDocumentException, IOException {
 		// Read Data from Excel
 		String ORGNAME = eu.getDataFromExcel("Organization", 7, 2) + ju.getRandomNumber();
@@ -67,6 +80,11 @@ public class CreateOrganizationTest extends BaseClass{
 	}
 
 	@Test(groups = "RegressionTest")
+	/**
+	 * This method is for create organization with phone number
+	 * @throws EncryptedDocumentException
+	 * @throws IOException
+	 */
 	public void createOrganizationWithPhoneNumber() throws EncryptedDocumentException, IOException {
 		// Read Data from Excel
 		String ORGNAME = eu.getDataFromExcel("Organization", 4, 2) + ju.getRandomNumber();

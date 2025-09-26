@@ -12,6 +12,9 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+
 import com.comcast.crm.generic.databaseutility.DatabaseUtility;
 import com.comcast.crm.generic.fileutility.ExcelUtility;
 import com.comcast.crm.generic.fileutility.FileUtility;
@@ -52,15 +55,16 @@ public class BaseClass {
 	 * This Configuration Annotation is used for Launching the Browser
 	 * @throws IOException
 	 */
+	@Parameters("BROWSER")
 	@BeforeClass(groups = { "SmokeTest", "RegressionTest" })
-	public void openBrowser() throws IOException {
+	public void openBrowser(@Optional("chrome")String browser) throws IOException {
 		Reporter.log("====Open Browser====", true);
-		String BROWSER = fu.getDataFromPropertiesFile("browser");
+		String BROWSER=browser;
 		if (BROWSER.equals("chrome")) {
 			driver = new ChromeDriver();
 		} else if (BROWSER.equals("edge")) {
 			driver = new EdgeDriver();
-		} else if (BROWSER.equals("friefox")) {
+		} else if (BROWSER.equals("firefox")) {
 			driver = new FirefoxDriver();
 		} else {
 			driver = new ChromeDriver();

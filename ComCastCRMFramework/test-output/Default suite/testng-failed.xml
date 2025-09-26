@@ -3,19 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.comcast.crm.organizationtest.CreateOrgTest">
+      <class name="practiceTest.InvoiceTest">
         <methods>
-          <include name="logout"/>
-          <include name="closeBrowser"/>
-          <include name="connectToDB"/>
-          <include name="createOrganizationWithIndustry"/>
-          <include name="createOrganization"/>
-          <include name="closeDBConnection"/>
-          <include name="createOrganizationWithPhoneNumber"/>
-          <include name="loginToApplication"/>
-          <include name="openBrowser"/>
+          <include name="activeSim"/>
         </methods>
-      </class> <!-- com.comcast.crm.organizationtest.CreateOrgTest -->
+      </class> <!-- practiceTest.InvoiceTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

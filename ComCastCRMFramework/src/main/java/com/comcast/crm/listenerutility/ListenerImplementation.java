@@ -23,15 +23,14 @@ import com.comcast.crm.generic.webdriverutility.UtilityClassObject;
  */
 public class ListenerImplementation implements ITestListener, ISuiteListener {
 
-	public static ExtentSparkReporter spark;
+	public ExtentSparkReporter spark;
 	public static ExtentReports report;
-	public ExtentTest test;
+	public static ExtentTest test;
 	
 	/**
 	 * This method is used for report configuration
 	 */
 	public void onStart(ISuite suite) {
-		test.log(Status.INFO,"Report configuration");
 		/* Spark Report configuration */
 		String time = new Date().toString().replace(" ", "_").replace(":", "_");
 		spark = new ExtentSparkReporter("./AdvanceReport/report_"+time+".html");
@@ -40,15 +39,16 @@ public class ListenerImplementation implements ITestListener, ISuiteListener {
 		spark.config().setTheme(Theme.DARK);
 
 		/* Add environment info and create test */
-		report.attachReporter(spark);
+		report= new ExtentReports();
+		report.attachReporter(spark); 
 		report.setSystemInfo("OS", "Windows-10");
+		report.setSystemInfo("BROWSER", "Chrome");
 	}
 
 	/**
 	 * This method is used to take report back-up
 	 */
 	public void onFinish(ISuite suite) {
-		test.log(Status.INFO,"Report backup");
 		report.flush();
 	}
 
@@ -56,8 +56,8 @@ public class ListenerImplementation implements ITestListener, ISuiteListener {
 	 * This method is used to create the test
 	 */
 	public void onTestStart(ITestResult result) {
-		test.log(Status.INFO,result.getMethod().getMethodName() + "===START===");
 		UtilityClassObject.setTest(test);
+		test.log(Status.INFO,result.getMethod().getMethodName() + "===START===");
 		test= report.createTest(result.getMethod().getMethodName());
 	}
 
@@ -70,7 +70,7 @@ public class ListenerImplementation implements ITestListener, ISuiteListener {
 		 String filepath = screenshot.getScreenshotAs(OutputType.BASE64);
 		String time = new Date().toString().replace(" ", "_").replace(":", "_");
 		test.addScreenCaptureFromBase64String(filepath, testname+"_"+time);
-		test.log(Status.PASS,"===>" + result.getMethod().getMethodName() + ">===END===");
+		test.log(Status.PASS,"===>" + result.getMethod().getMethodName() + ">===COMPLETED===");
 	}
 
 	/**
@@ -82,6 +82,6 @@ public class ListenerImplementation implements ITestListener, ISuiteListener {
 		 String filepath = screenshot.getScreenshotAs(OutputType.BASE64);
 		String time = new Date().toString().replace(" ", "_").replace(":", "_");
 		test.addScreenCaptureFromBase64String(filepath, testname+"_"+time);
-		test.log(Status.FAIL,result.getMethod().getMethodName()+"===COMPLETED===");
+		test.log(Status.FAIL,result.getMethod().getMethodName()+"===FAILED===");
 	}
 }

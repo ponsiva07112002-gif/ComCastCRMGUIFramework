@@ -10,9 +10,17 @@ import com.comcast.crm.objectrepositoryutility.CreatingNewProduct;
 import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.ProductInfoPage;
 import com.comcast.crm.objectrepositoryutility.ProductPage;
-
+/**
+ * This class is for create product
+ * @author Ponselvi
+ */
 public class CreateProductTest extends BaseClass_Parallel{
 	@Test
+	/**
+	 * This method is for create product
+	 * @throws Throwable
+	 * @throws IOException
+	 */
 	public void createProduct() throws Throwable, IOException {
 
 		String PRONAME = eu.getDataFromExcel("Product", 1, 2) + ju.getRandomNumber();

@@ -8,7 +8,10 @@ import org.testng.annotations.Test;
 import com.comcast.crm.baseclass.BaseClass;
 import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
 import com.comcast.crm.objectrepositoryutility.HomePage;
-
+/**
+ * This class is for Create compaigns
+ * @author Ponselvi
+ */
 public class CreateCampaigns extends BaseClass {
 
 	@Test

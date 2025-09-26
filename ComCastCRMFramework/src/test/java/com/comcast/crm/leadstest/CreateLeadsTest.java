@@ -11,9 +11,17 @@ import com.comcast.crm.objectrepositoryutility.CreatingNewLeads;
 import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.LeadsInfoPage;
 import com.comcast.crm.objectrepositoryutility.LeadsPage;
-
+/**
+ * This class is for create Lead
+ * @author Ponselvi
+ */
 public class CreateLeadsTest extends BaseClass_Parallel{
 	@Test
+	/**
+	 * This method is for crate Lead
+	 * @throws Throwable
+	 * @throws IOException
+	 */
 	public void createLeads() throws Throwable, IOException {
 		String LASTNAME = eu.getDataFromExcel("Leads", 1, 2) + ju.getRandomNumber();
 		String COMPANY = eu.getDataFromExcel("Leads", 1, 3) + ju.getRandomNumber();

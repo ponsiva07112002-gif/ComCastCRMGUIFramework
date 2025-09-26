@@ -9,7 +9,7 @@ import org.testng.ITestResult;
  */
 public class RetryListenerImplementation implements IRetryAnalyzer {
 	int count = 0;
-	int limitCount = 0;
+	int limitCount = 3;
 
 	/**
 	 * This method is used to re-run the test script n number of times whenever it gets failed

@@ -64,7 +64,7 @@ public class BaseClass_Parallel {
 			driver = new ChromeDriver();
 		} else if (BROWSER.equals("edge")) {
 			driver = new EdgeDriver();
-		} else if (BROWSER.equals("friefox")) {
+		} else if (BROWSER.equals("firefox")) {
 			driver = new FirefoxDriver();
 		} else {
 			driver = new ChromeDriver();
