@@ -57,9 +57,9 @@ public class BaseClass {
 	 */
 	@Parameters("BROWSER")
 	@BeforeClass(groups = { "SmokeTest", "RegressionTest" })
-	public void openBrowser(@Optional("chrome")String browser) throws IOException {
+	public void openBrowser(@Optional("chrome")String Browser) throws IOException {
 		Reporter.log("====Open Browser====", true);
-		String BROWSER=browser;
+		String BROWSER=System.getProperty("browser", Browser);
 		if (BROWSER.equals("chrome")) {
 			driver = new ChromeDriver();
 		} else if (BROWSER.equals("edge")) {
@@ -82,9 +82,12 @@ public class BaseClass {
 	@BeforeMethod(groups = { "SmokeTest", "RegressionTest" })
 	public void loginToApplication() throws IOException {
 		Reporter.log("====Login To Application====", true);
-		String URL = fu.getDataFromPropertiesFile("url");
-		String USERNAME = fu.getDataFromPropertiesFile("username");
-		String PASSWORD = fu.getDataFromPropertiesFile("password");
+		String URL = System.getProperty("url", fu.getDataFromPropertiesFile("url"));
+		String USERNAME = System.getProperty("username", fu.getDataFromPropertiesFile("username"));
+		String PASSWORD = System.getProperty("password", fu.getDataFromPropertiesFile("password"));
+		//String URL = fu.getDataFromPropertiesFile("url");
+		//String USERNAME = fu.getDataFromPropertiesFile("username");
+		//String PASSWORD = fu.getDataFromPropertiesFile("password");
 		driver.get(URL);
 		LoginPage lp = new LoginPage(driver);
 		lp.loginToApp(USERNAME, PASSWORD);

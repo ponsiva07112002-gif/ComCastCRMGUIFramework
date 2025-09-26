@@ -32,16 +32,13 @@ public class CreateContactTest extends BaseClass{
 	public void createContact() throws EncryptedDocumentException, IOException {
 
 		// Read Data from Excel //
-		UtilityClassObject.getTest().log(Status.INFO, "Read data from excel");
 		String LASTNAME = eu.getDataFromExcel("Contacts", 1, 2) + ju.getRandomNumber();
 
 		// Navigate and Create Contact
-		UtilityClassObject.getTest().log(Status.INFO, "Navigate to contact page");
 		HomePage hp = new HomePage(driver);
 		hp.getContactsLink().click();
 		ContactPage cp = new ContactPage(driver);
 		cp.getCreateContact().click();
-		UtilityClassObject.getTest().log(Status.INFO, "Navigate to create new contact page");
 		CreatingNewContact cnc = new CreatingNewContact(driver);
 		cnc.createContact(LASTNAME);
 
@@ -50,7 +47,6 @@ public class CreateContactTest extends BaseClass{
 		String header = cip.getHeaderInfo().getText(); // Hard Assert
 		boolean status = header.contains(LASTNAME);
 		Assert.assertEquals(status, true);
-		UtilityClassObject.getTest().log(Status.PASS, "Contact is created");
 	}
 	
 	/**
@@ -63,7 +59,6 @@ public class CreateContactTest extends BaseClass{
 	@Test(groups = "RegressionTest")
 	public void createContactWithOrganization() throws EncryptedDocumentException, IOException, InterruptedException {
 		// Read Data from Excel
-		UtilityClassObject.getTest().log(Status.INFO, "Read data from excel");
 		String LASTNAME = eu.getDataFromExcel("Contacts", 7, 2) + ju.getRandomNumber();
 		String ORGNAME = eu.getDataFromExcel("Contacts", 7, 3) + ju.getRandomNumber();
 
@@ -77,11 +72,9 @@ public class CreateContactTest extends BaseClass{
 		Thread.sleep(2000);
 
 		// Navigate and Create Contact
-		UtilityClassObject.getTest().log(Status.INFO, "Navigate to contact page");
 		hp.getContactsLink().click();
 		ContactPage cp = new ContactPage(driver);
 		cp.getCreateContact().click();
-		UtilityClassObject.getTest().log(Status.INFO, "Navigate to create new contact page");
 		CreatingNewContact cnc = new CreatingNewContact(driver);
 		cnc.searchOrganization(LASTNAME, ORGNAME);
 		driver.findElement(By.xpath("//a[contains(text(),'" + ORGNAME + "')]")).click();
@@ -101,7 +94,6 @@ public class CreateContactTest extends BaseClass{
 		SoftAssert assertobj = new SoftAssert();
 		assertobj.assertEquals(org.trim(), ORGNAME);
 		assertobj.assertAll();
-		UtilityClassObject.getTest().log(Status.PASS, "Contact is created with organization");
 	}
 	
 	/**
@@ -113,16 +105,13 @@ public class CreateContactTest extends BaseClass{
 	@Test(groups = "RegressionTest")
 	public void createContactWithDate() throws EncryptedDocumentException, IOException {
 		// Read Data from Excel
-		UtilityClassObject.getTest().log(Status.INFO, "Read data from excel");
 		String LASTNAME = eu.getDataFromExcel("Contacts", 1, 2) + ju.getRandomNumber();
 
 		// Navigate and Create Contact
-		UtilityClassObject.getTest().log(Status.INFO, "Navigate to contact page");
 		HomePage hp = new HomePage(driver);
 		hp.getContactsLink().click();
 		ContactPage cp = new ContactPage(driver);
 		cp.getCreateContact().click();
-		UtilityClassObject.getTest().log(Status.INFO, "Navigate to create new contact page");
 		String STARTDATE = ju.getSystemDateYYYYDDMM();
 		String ENDDATE = ju.getRequiredDateYYYYMMDD(30);
 		CreatingNewContact cnc = new CreatingNewContact(driver);
@@ -142,6 +131,5 @@ public class CreateContactTest extends BaseClass{
 		String supportEndDate = cip.getEndDateInfo().getText();
 		assertobj.assertEquals(supportEndDate, ENDDATE);
 		assertobj.assertAll();
-		UtilityClassObject.getTest().log(Status.PASS, "Contact is created with Date");
 	}
 }
