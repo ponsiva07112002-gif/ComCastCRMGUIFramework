@@ -38,7 +38,7 @@ public class BaseClass {
 	public ExcelUtility eu = new ExcelUtility();
 	public FileUtility fu = new FileUtility();
 	public JavaUtility ju = new JavaUtility();
-	public WebDriver driver = null;
+	public WebDriver driver = null;;
 	public static WebDriver sdriver = null;
 	
 	/**
