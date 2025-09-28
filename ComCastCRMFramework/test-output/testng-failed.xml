@@ -5,10 +5,10 @@
     <classes>
       <class name="com.comcast.crm.contacttest.CreateContactTest">
         <methods>
-          <include name="logout"/>
           <include name="closeBrowser"/>
-          <include name="connectToDB"/>
+          <include name="logout"/>
           <include name="createContactWithOrganization"/>
+          <include name="connectToDB"/>
           <include name="createContactWithDate"/>
           <include name="createContact"/>
           <include name="closeDBConnection"/>

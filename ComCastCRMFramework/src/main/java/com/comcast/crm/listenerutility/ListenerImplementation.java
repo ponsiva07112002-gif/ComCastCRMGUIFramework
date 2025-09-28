@@ -93,3 +93,4 @@ public class ListenerImplementation implements ITestListener, ISuiteListener {
 		UtilityClassObject.getTest().log(Status.FAIL, result.getMethod().getMethodName() + "===FAILED===");
 	}
 }
+ 
